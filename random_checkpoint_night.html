@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Random Checkpoint Night</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:wght@500;600;700;800&family=JetBrains+Mono:wght@700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind (Play CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        ink: '#0E0F11',
+                        panel: '#17191C',
+                        line: '#2A2D32',
+                        paper: '#F4F4F2',
+                        mute: '#C9CCD1',
+                        soft: '#DADCE0',
+                        accent: 'var(--accent)',
+                        lucky: { bg: '#12301F', fg: '#5BE39A', text: '#CFEBDB' },
+                        unlucky: { bg: '#33171A', fg: '#FF8A80', text: '#F2D2D0' },
+                    },
+                    fontFamily: {
+                        display: ['Anton', 'sans-serif'],
+                        body: ['Barlow', 'sans-serif'],
+                        mono: ['"JetBrains Mono"', 'monospace'],
+                    },
+                },
+            },
+        };
+    </script>
+
+    <style>
+        /* Change this one value to recolor the whole poster */
+        :root { --accent: #FFC21A; }
+
+        .hazard    { background: repeating-linear-gradient(-45deg, var(--accent) 0 28px, #0E0F11 28px 56px); }
+        .hazard-sm { background: repeating-linear-gradient(-45deg, var(--accent) 0 14px, transparent 14px 28px); }
+
+        /* Scales the fixed 1080x1620 poster to fit any screen */
+        #stage  { width: 1080px; height: 1620px; transform-origin: top left; }
+        #frame  { overflow: hidden; }
+    </style>
+</head>
+<body class="bg-black min-h-screen flex justify-center items-start py-6 font-body">
+
+<div id="frame">
+    <div id="stage">
+        <main class="w-[1080px] h-[1620px] bg-ink text-paper flex flex-col overflow-hidden">
+
+            <div class="hazard h-7 shrink-0"></div>
+
+            <div class="flex-1 min-h-0 px-14 pt-12 pb-10 flex flex-col gap-[30px]">
+
+                <!-- Header -->
+                <header class="flex justify-between items-center">
+                    <div class="flex items-center gap-3 text-[21px] font-bold tracking-[4px] text-mute">
+                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10h16v10H4z"/><path d="M8 10 18 4"/><circle cx="9" cy="15" r="2"/><path d="M14 14h3M14 17h3"/></svg>
+                        <span>RP GRAND CITY WIDE EVENT</span>
+                    </div>
+                    <div class="px-[18px] py-[9px] border-2 border-accent rounded-full text-accent text-lg font-extrabold tracking-[3px]">NO REGISTRATION</div>
+                </header>
+
+                <!-- Title -->
+                <h1 class="flex flex-col gap-0.5 font-display leading-[0.95] tracking-[1px]">
+                    <span class="text-[110px] text-paper">RANDOM</span>
+                    <span class="text-[166px] text-accent">CHECKPOINT</span>
+                    <span class="flex items-center gap-6">
+        <span class="text-[110px] text-paper">NIGHT</span>
+        <span class="hazard-sm flex-1 h-3.5"></span>
+      </span>
+                </h1>
+
+                <!-- Location image -->
+                <figure class="relative h-[420px] shrink-0 rounded-2xl overflow-hidden border-[3px] border-accent m-0">
+                    <img src="./location.jpg" alt="Checkpoint area in the city" class="w-full h-full object-cover object-[50%_55%] block">
+                    <div class="absolute left-5 bottom-5 flex items-center gap-3 px-5 py-3.5 bg-ink rounded-[10px]">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-12a7 7 0 0 1 14 0c0 5.8-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>
+                        <div class="flex flex-col">
+                            <span class="text-[15px] font-bold tracking-[3px] text-mute">CHECKPOINT LOCATION</span>
+                            <span class="text-2xl font-extrabold text-paper">Announced live on the radio</span>
+                        </div>
+                    </div>
+                    <div class="absolute right-5 top-5 px-4 py-2.5 bg-accent rounded-lg text-ink font-display text-2xl tracking-[1px]">GOOD LUCK &amp; DRIVE SAFELY</div>
+                </figure>
+
+                <!-- Prizes -->
+                <section class="grid grid-cols-3 gap-[18px]">
+                    <div class="bg-panel rounded-[14px] px-[26px] py-[22px] flex flex-col gap-1.5">
+                        <span class="text-[17px] font-bold tracking-[3px] text-mute">PRIZE POOL</span>
+                        <span class="font-display text-[58px] leading-none text-accent">$100,000</span>
+                    </div>
+                    <div class="bg-panel rounded-[14px] px-[26px] py-[22px] flex flex-col gap-1.5">
+                        <span class="text-[17px] font-bold tracking-[3px] text-mute">WINNERS</span>
+                        <span class="font-display text-[58px] leading-none text-paper">5 PLAYERS</span>
+                    </div>
+                    <div class="bg-accent rounded-[14px] px-[26px] py-[22px] flex flex-col gap-1.5">
+                        <span class="text-[17px] font-extrabold tracking-[3px] text-[#2A2205]">EACH WINNER</span>
+                        <span class="font-display text-[58px] leading-none text-ink">$20,000</span>
+                    </div>
+                </section>
+
+                <!-- How to win + keyword -->
+                <section class="grid grid-cols-2 gap-[18px]">
+                    <div class="bg-panel rounded-[14px] p-[26px] flex flex-col gap-4">
+                        <h2 class="font-display text-[30px] tracking-[1px] text-paper m-0">HOW TO WIN</h2>
+                        <ol class="flex flex-col gap-4 m-0 p-0 list-none">
+                            <li class="flex gap-3.5 items-center">
+                                <span class="shrink-0 w-[34px] h-[34px] rounded-full bg-accent text-ink font-extrabold text-lg flex items-center justify-center">1</span>
+                                <span class="text-[19px] leading-[1.3] font-semibold text-soft">Listen for the CEO/COO's radio announcement.</span>
+                            </li>
+                            <li class="flex gap-3.5 items-center">
+                                <span class="shrink-0 w-[34px] h-[34px] rounded-full bg-accent text-ink font-extrabold text-lg flex items-center justify-center">2</span>
+                                <span class="text-[19px] leading-[1.3] font-semibold text-soft">Drive to the announced checkpoint location.</span>
+                            </li>
+                            <li class="flex gap-3.5 items-center">
+                                <span class="shrink-0 w-[34px] h-[34px] rounded-full bg-accent text-ink font-extrabold text-lg flex items-center justify-center">3</span>
+                                <span class="text-[19px] leading-[1.3] font-semibold text-soft">Type the keyword in the Attempt Chat.</span>
+                            </li>
+                            <li class="flex gap-3.5 items-center">
+                                <span class="shrink-0 w-[34px] h-[34px] rounded-full bg-accent text-ink font-extrabold text-lg flex items-center justify-center">4</span>
+                                <span class="text-[19px] leading-[1.3] font-semibold text-soft">First 5 LUCKY results win $20,000 each.</span>
+                            </li>
+                        </ol>
+                    </div>
+
+                    <div class="flex flex-col gap-[18px]">
+                        <div class="bg-panel rounded-[14px] p-6 flex flex-col gap-3.5">
+                            <span class="text-[17px] font-bold tracking-[3px] text-mute">TYPE IN ATTEMPT CHAT</span>
+                            <div class="border-[3px] border-dashed border-accent rounded-[10px] p-4 text-center font-mono text-[42px] font-bold tracking-[4px] text-accent">CHECKPOINT</div>
+                        </div>
+                        <div class="grid grid-cols-2 gap-[18px] flex-1">
+                            <div class="bg-lucky-bg rounded-[14px] px-5 py-[18px] flex flex-col justify-center gap-1">
+                                <div class="flex items-center gap-2">
+                                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#5BE39A" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5 9.5 18 20 6"/></svg>
+                                    <span class="font-display text-[32px] text-lucky-fg">LUCKY</span>
+                                </div>
+                                <span class="text-lg font-semibold text-lucky-text">You're a winner</span>
+                            </div>
+                            <div class="bg-unlucky-bg rounded-[14px] px-5 py-[18px] flex flex-col justify-center gap-1">
+                                <div class="flex items-center gap-2">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FF8A80" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+                                    <span class="font-display text-[32px] text-unlucky-fg">UNLUCKY</span>
+                                </div>
+                                <span class="text-lg font-semibold text-unlucky-text">No retries</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Rules -->
+                <footer class="grid grid-cols-3 gap-[18px] border-t-2 border-line pt-6 mt-auto">
+                    <div class="flex gap-2.5 items-start">
+                        <svg class="shrink-0 mt-0.5" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16.5v.5"/></svg>
+                        <span class="text-lg leading-[1.35] font-semibold text-mute">One attempt per player only.</span>
+                    </div>
+                    <div class="flex gap-2.5 items-start">
+                        <svg class="shrink-0 mt-0.5" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-12a7 7 0 0 1 14 0c0 5.8-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>
+                        <span class="text-lg leading-[1.35] font-semibold text-mute">Must be at the checkpoint. Attempts elsewhere are invalid.</span>
+                    </div>
+                    <div class="flex gap-2.5 items-start">
+                        <svg class="shrink-0 mt-0.5" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+                        <span class="text-lg leading-[1.35] font-semibold text-mute">Closes after 30 minutes or once 5 winners are drawn.</span>
+                    </div>
+                </footer>
+
+            </div>
+
+            <div class="hazard h-7 shrink-0"></div>
+        </main>
+    </div>
+</div>
+
+<script>
+    // Fit the 1080x1620 poster to the screen (never upscales)
+    function fit() {
+        const stage = document.getElementById('stage');
+        const frame = document.getElementById('frame');
+        const s = Math.min(1, (window.innerWidth - 24) / 1080);
+        stage.style.transform = `scale(${s})`;
+        frame.style.width = `${1080 * s}px`;
+        frame.style.height = `${1620 * s}px`;
+    }
+    window.addEventListener('resize', fit);
+    fit();
+</script>
+</body>
+</html>
