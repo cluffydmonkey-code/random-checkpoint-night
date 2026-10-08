@@ -38,13 +38,11 @@
     </script>
 
     <style>
-        /* Change this one value to recolor the whole poster */
         :root { --accent: #FFC21A; }
 
         .hazard    { background: repeating-linear-gradient(-45deg, var(--accent) 0 28px, #0E0F11 28px 56px); }
         .hazard-sm { background: repeating-linear-gradient(-45deg, var(--accent) 0 14px, transparent 14px 28px); }
 
-        /* Scales the fixed 1080x1620 poster to fit any screen */
         #stage  { width: 1080px; height: 1620px; transform-origin: top left; }
         #frame  { overflow: hidden; }
     </style>
@@ -73,13 +71,23 @@
                     <span class="text-[110px] text-paper">RANDOM</span>
                     <span class="text-[166px] text-accent">CHECKPOINT</span>
                     <span class="flex items-center gap-6">
-        <span class="text-[110px] text-paper">NIGHT</span>
-        <span class="hazard-sm flex-1 h-3.5"></span>
-      </span>
+                        <span class="text-[110px] text-paper">NIGHT</span>
+                        <span class="hazard-sm flex-1 h-3.5"></span>
+                    </span>
                 </h1>
 
                 <!-- Location image -->
-                <img src="checkpoint.png" alt="Checkpoint area in the city" class="w-full h-full object-cover object-[50%_55%] block">
+                <figure class="relative h-[420px] shrink-0 rounded-2xl overflow-hidden border-[3px] border-accent m-0">
+                    <img src="checkpoint.jpeg" alt="Checkpoint area in the city" class="w-full h-full object-cover object-[50%_55%] block">
+                    <div class="absolute left-5 bottom-5 flex items-center gap-3 px-5 py-3.5 bg-ink/90 backdrop-blur rounded-[10px]">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-12a7 7 0 0 1 14 0c0 5.8-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>
+                        <div class="flex flex-col">
+                            <span class="text-[15px] font-bold tracking-[3px] text-mute">CHECKPOINT LOCATION</span>
+                            <span class="text-2xl font-extrabold text-paper">Announced live on the radio</span>
+                        </div>
+                    </div>
+                    <div class="absolute right-5 top-5 px-4 py-2.5 bg-accent rounded-lg text-ink font-display text-2xl tracking-[1px]">GOOD LUCK &amp; DRIVE SAFELY</div>
+                </figure>
 
                 <!-- Prizes -->
                 <section class="grid grid-cols-3 gap-[18px]">
@@ -169,7 +177,6 @@
 </div>
 
 <script>
-    // Fit the 1080x1620 poster to the screen (never upscales)
     function fit() {
         const stage = document.getElementById('stage');
         const frame = document.getElementById('frame');
